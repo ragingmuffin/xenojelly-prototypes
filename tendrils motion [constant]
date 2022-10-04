@@ -1,7 +1,6 @@
 #include <Servo.h>
 
-Servo tentacle1;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
+Servo tentacle1;  // create servo objects to control servos   up to twelve servo objects can be created on most boards
 Servo tentacle2;
 Servo tentacle3;
 Servo tentacle4;
@@ -12,7 +11,7 @@ int pos = 0;    // variable to store the servo position
 
  
 void setup() {
-  tentacle1.attach(10);  // attaches the servo on pin 9 to the servo object
+  tentacle1.attach(10);  // attaches the servo on pins to the servo objects
   tentacle2.attach(9);
   tentacle3.attach(8);
   tentacle4.attach(7);
@@ -29,7 +28,7 @@ void loop() {
     tentacle4.write(pos);
     tentacle5.write(pos);
     tentacle6.write(pos);
-    delay(30);                       // waits 15ms for the servo to reach the position
+    delay(30);                       // waits 30ms for the servo to reach the position
   }
   for (pos = 70; pos >= 0; pos -= 1) { // goes from 70 degrees to 0 degrees
     tentacle1.write(pos);              // tell servo to go to position in variable 'pos'
@@ -38,6 +37,6 @@ void loop() {
     tentacle4.write(pos);
     tentacle5.write(pos);
     tentacle6.write(pos);
-    delay(20);                       // waits 15ms for the servo to reach the position
+    delay(20);                       // waits 20ms for the servo to reach the position
   }
 }
